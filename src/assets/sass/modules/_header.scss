@@ -1,0 +1,57 @@
+.header {
+  background: $orange;
+  @include e(top) {
+    padding: 10px 0;
+    .nav {
+      float: right;
+      li {
+        display: inline-block;
+        margin-left: 30px;
+        a {
+          color: $white;
+          text-transform: uppercase;
+          font: normal normal 16px/1.5 $font-family--primary;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        &:first-child {
+          margin-left: 0;
+        }
+
+        @include mq(md) {
+          margin-left: 50px;
+        }
+      }
+    }
+  }
+
+  @include e(bottom) {
+    padding: 30px 0 50px;
+    color: $white;
+    text-align: center;
+    h1 {
+      font: normal bold 36px $font-family--primary;
+    }
+
+    span {
+      margin: 10px 0 20px;
+      display: inline-block;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #eeeeee;
+      border-radius: 4px;
+
+      &:focus {
+        outline: 1px solid $orange;
+      }
+
+      @include mq(sm) {
+        width: 500px;
+      }
+    }
+  }
+}
