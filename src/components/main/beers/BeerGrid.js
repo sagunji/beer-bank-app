@@ -68,6 +68,9 @@ class BeerGrid extends Component {
         isSearchByText: false
       });
     } catch (err) {
+      this.setState({
+        hasMore: false
+      });
       toast.error({
         title: 'Error',
         message: 'Something is wrong'
