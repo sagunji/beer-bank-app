@@ -1,7 +1,3 @@
-/**
- * @author Ramesh Prajapati <rameshp@offenderradar.com>.
- */
-
 import Immutable from 'immutable';
 
 import * as actionTypeConstants from '../constants/actions';
