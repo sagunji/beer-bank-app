@@ -73,7 +73,7 @@ class BeerGrid extends Component {
       });
       toast.error({
         title: 'Error',
-        message: 'Something is wrong'
+        message: 'Something is wrong.'
       });
     }
     this.setState({
