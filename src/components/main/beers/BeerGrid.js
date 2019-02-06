@@ -18,7 +18,8 @@ class BeerGrid extends Component {
       beers: [],
       pageInfo: { page: 0, per_page: 25 },
       searchFor: '',
-      isSearchByText: false
+      isSearchByText: false,
+      hasMore: true
     };
     this.fetchBeers = this.fetchBeers.bind(this);
   }
@@ -62,6 +63,7 @@ class BeerGrid extends Component {
 
       this.setState({
         beers: beers.concat(results),
+        hasMore: results.length > 0 ? true : false,
         pageInfo: newPageInfo,
         isSearchByText: false
       });
@@ -89,7 +91,7 @@ class BeerGrid extends Component {
             <InfiniteScroll
               dataLength={this.state.beers.length}
               next={this.fetchBeers}
-              hasMore={true}
+              hasMore={this.state.hasMore}
               loader={<Spinner />}
             >
               {beers.map((beer, index) => {
