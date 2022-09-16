@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "dependencies": {
     "axios": "^0.17.1",
-    "bootstrap": "3.3.7",
+    "bootstrap": "3.4.1",
     "immutable": "^4.0.0-rc.12",
     "izitoast": "^1.4.0",
     "node-sass-chokidar": "^1.2.0",
